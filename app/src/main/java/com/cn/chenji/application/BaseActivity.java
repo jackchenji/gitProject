@@ -11,7 +11,7 @@ import java.io.File;
  */
 public class BaseActivity extends Activity {
 
-    private Context mContext;
+    public Context mContext;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,5 +26,4 @@ public class BaseActivity extends Activity {
         //  method.
 
     }
-
 }

@@ -30,4 +30,29 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //注册绑定开始
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    //注册绑定结束
+
+
+    //recycleview开始
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0' //添加RecycleView的依赖库
+    //recycleview结束
+
+    //json
+    implementation 'com.alibaba:fastjson:1.1.60.android'
+
+    //网络
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+
+    //鸿洋 自动化布局
+    implementation 'com.zhy:autolayout:1.4.5'
+
+    //权限框架
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    implementation 'io.reactivex:rxjava:1.1.3'
 }
+
