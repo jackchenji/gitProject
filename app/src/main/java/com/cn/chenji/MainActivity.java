@@ -1,5 +1,6 @@
 package com.cn.chenji;
 
+import android.content.Intent;
 import android.service.carrier.CarrierService;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.AdapterView;
 
 import com.cn.chenji.adapter.ViewAdapter;
 import com.cn.chenji.application.BaseActivity;
+import com.cn.chenji.view.LocationActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,9 +62,9 @@ public class MainActivity extends BaseActivity{
                 Log.i("test","点击的第几项"+position);
                 switch (position)
                 {
-                    case  1:
-
-
+                    case  0:
+                        Intent  intent=new Intent(MainActivity.this,LocationActivity.class);
+                        mContext.startActivity(intent);
                         break;
                         default: break;
                 }
