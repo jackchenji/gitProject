@@ -1,5 +1,6 @@
 package com.cn.chenji;
 
+import android.service.carrier.CarrierService;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -57,6 +58,15 @@ public class MainActivity extends BaseActivity{
             @Override
             public void onItemClickListener(View view, int position) {
                 Log.i("test","点击的第几项"+position);
+                switch (position)
+                {
+                    case  1:
+
+
+                        break;
+                        default: break;
+                }
+
             }
         });
         }
