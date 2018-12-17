@@ -1,26 +1,24 @@
 package com.cn.chenji;
 
 import android.content.Intent;
-import android.service.carrier.CarrierService;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-
+import com.cn.baiduLibrary.view.BaiduMapActivity;
+import com.cn.baiduLibrary.view.LocationActivity;
 import com.cn.chenji.adapter.ViewAdapter;
 import com.cn.chenji.application.BaseActivity;
-import com.cn.chenji.view.LocationActivity;
+
+
 
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity{
     @BindView(R.id.rv)
@@ -60,14 +58,19 @@ public class MainActivity extends BaseActivity{
             @Override
             public void onItemClickListener(View view, int position) {
                 Log.i("test","点击的第几项"+position);
+                Intent  intent;
                 switch (position)
                 {
                     case  0:
-                        Intent  intent=new Intent(MainActivity.this,LocationActivity.class);
-                        mContext.startActivity(intent);
+                        intent=new Intent(MainActivity.this,LocationActivity.class);  //百度定位
                         break;
-                        default: break;
+                    case   1:
+                         intent=new Intent(MainActivity.this, BaiduMapActivity.class);      //百度地图
+                        break;
+                    default: intent=new Intent();
+                        break;
                 }
+                mContext.startActivity(intent);
 
             }
         });

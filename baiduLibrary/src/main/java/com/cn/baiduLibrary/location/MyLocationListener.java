@@ -34,8 +34,8 @@ public class MyLocationListener extends BDAbstractLocationListener {
         int errorCode = location.getLocType();
         //获取定位类型、定位错误返回码，具体信息可参照类参考中BDLocation类中的说明
         if(errorCode==61||errorCode==161){
-       locationInterf.onLocationSuccess("精度："+String.valueOf(latitude)+"纬度："+String.valueOf(longitude));
-         }else{
+            locationInterf.onLocationSuccess(String.valueOf(latitude)+"，"+String.valueOf(longitude));
+        }else{
             locationInterf.onLocationFail(String.valueOf(errorCode));
 }
 
