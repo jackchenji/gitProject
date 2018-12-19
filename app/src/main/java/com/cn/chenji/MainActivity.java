@@ -67,11 +67,12 @@ public class MainActivity extends BaseActivity{
                     case   1:
                          intent=new Intent(MainActivity.this, BaiduMapActivity.class);      //百度地图
                         break;
-                    default: intent=new Intent();
+                    default: intent=new Intent(MainActivity.this, MainActivity.class);
                         break;
                 }
-                mContext.startActivity(intent);
-
+               if(intent!=null){
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(intent);}
             }
         });
         }

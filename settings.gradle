@@ -1,1 +1,1 @@
-include ':app', ':baiduLibrary'
+include ':app', ':baiduLibrary', ':baselibrary'
