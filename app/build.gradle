@@ -19,6 +19,14 @@ android {
         main { jniLibs.srcDirs = ['libs'] }
     }
 
+    repositories{
+        //libs 目录
+        flatDir{
+            dirs "libs"
+            dirs project(':baiduLibrary').file('libs')// 直接用模块的相对路径，这样是绝对准确的,在主module中加入这个不然aar可能找不到
+        }
+    }
+
 }
 
 dependencies {
@@ -50,6 +58,8 @@ dependencies {
     //加载百度工程
     implementation project(':baiduLibrary')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+
 }
 
 
