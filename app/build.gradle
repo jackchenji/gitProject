@@ -11,7 +11,6 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-
     //设置代码混淆结束
 
 
@@ -19,9 +18,9 @@ android {
         main { jniLibs.srcDirs = ['libs'] }
     }
 
-    repositories{
+    repositories {
         //libs 目录
-        flatDir{
+        flatDir {
             dirs "libs"
             dirs project(':baiduLibrary').file('libs')// 直接用模块的相对路径，这样是绝对准确的,在主module中加入这个不然aar可能找不到
         }
@@ -62,7 +61,3 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.8.1'
 }
-
-
-
-
