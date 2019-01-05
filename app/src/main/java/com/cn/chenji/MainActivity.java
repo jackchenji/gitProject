@@ -11,14 +11,13 @@ import android.util.Log;
 import android.view.View;
 import com.cn.baiduLibrary.view.BaiduMapActivity;
 import com.cn.baiduLibrary.view.LocationActivity;
+import com.cn.baiduLibrary.view.NavigationActivity;
 import com.cn.chenji.adapter.ViewAdapter;
 import com.cn.chenji.application.BaseActivity;
-
-
-
 import java.util.ArrayList;
 import java.util.List;
 import butterknife.BindView;
+
 
 public class MainActivity extends BaseActivity{
     @BindView(R.id.rv)
@@ -67,6 +66,8 @@ public class MainActivity extends BaseActivity{
                     case   1:
                          intent=new Intent(MainActivity.this, BaiduMapActivity.class);      //百度地图
                         break;
+                        case 2:
+                        intent=new Intent(MainActivity.this, NavigationActivity.class);      //导航页面
                     default: intent=new Intent(MainActivity.this, MainActivity.class);
                         break;
                 }

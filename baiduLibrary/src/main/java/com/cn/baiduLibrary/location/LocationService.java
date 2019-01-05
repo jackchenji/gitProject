@@ -35,7 +35,7 @@ public class LocationService {
         LocationClientOption option = new LocationClientOption();
 
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
-//可选，设置定位模式，默认高精度
+        //可选，设置定位模式，默认高精度
 //LocationMode.Hight_Accuracy：高精度；
 //LocationMode. Battery_Saving：低功耗；
 //LocationMode. Device_Sensors：仅使用设备；
