@@ -40,6 +40,8 @@
         <activity android:name=".view.BaiduMapActivity"></activity>
         <!--百度地图-->
         <activity android:name=".view.LocationActivity"></activity>
+       <!--百度导航-->
+        <activity android:name=".view.NavigationActivity"></activity>
 
     </application>
 
