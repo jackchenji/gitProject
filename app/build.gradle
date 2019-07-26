@@ -12,8 +12,6 @@ android {
     }
 
     //设置代码混淆结束
-
-
     sourceSets {
         main { jniLibs.srcDirs = ['libs'] }
     }
@@ -57,7 +55,6 @@ dependencies {
     //加载百度工程
     implementation project(':baiduLibrary')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-
-
+    implementation project(':baselibrary')
     implementation 'com.google.code.gson:gson:2.8.1'
 }

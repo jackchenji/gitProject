@@ -35,7 +35,7 @@ public class BaseActivity extends Activity {
             public void call(com.tbruyelle.rxpermissions.Permission permission) {
                 //多个权限
             }
-        });
+        } );
     }
 
     public void initImageLoader(Context context) {

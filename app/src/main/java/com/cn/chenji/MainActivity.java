@@ -2,7 +2,6 @@ package com.cn.chenji;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -34,21 +33,10 @@ public class MainActivity extends BaseActivity{
         viewList.add("百度定位");
         viewList.add("百度地图");
         viewList.add("百度导航");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("百度AR");
-        viewList.add("");
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        viewList.add("picasso图片下载使用示例");
+
         // 设置item增加和删除时的动画
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
         ViewAdapter viewAdapter=new ViewAdapter(viewList,mContext);
@@ -60,14 +48,18 @@ public class MainActivity extends BaseActivity{
                 Intent  intent;
                 switch (position)
                 {
-                    case  0:
-                        intent=new Intent(MainActivity.this,LocationActivity.class);  //百度定位
+                        case 0:
+                             intent=new Intent(MainActivity.this,LocationActivity.class);  //百度定位
                         break;
-                    case   1:
-                         intent=new Intent(MainActivity.this, BaiduMapActivity.class);      //百度地图
+                        case 1:
+                             intent=new Intent(MainActivity.this, BaiduMapActivity.class);      //百度地图
                         break;
                         case 2:
-                        intent=new Intent(MainActivity.this, NavigationActivity.class);      //导航页面
+                             intent=new Intent(MainActivity.this, NavigationActivity.class);      //导航页
+                             break;
+                        case 3:
+                             intent=new Intent(MainActivity.this, picasso.MainActivity.class);      //picasso 图片下载展示
+                             break;
                     default: intent=new Intent(MainActivity.this, MainActivity.class);
                         break;
                 }
