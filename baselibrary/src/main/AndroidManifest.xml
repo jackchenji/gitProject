@@ -25,5 +25,7 @@
     <application>
         <activity android:name="picasso.MainActivity">
         </activity>
+        <activity android:name="greendao.GreenDaoActivity">
+        </activity>
     </application>
 </manifest>

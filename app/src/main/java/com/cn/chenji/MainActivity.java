@@ -16,6 +16,7 @@ import com.cn.chenji.application.BaseActivity;
 import java.util.ArrayList;
 import java.util.List;
 import butterknife.BindView;
+import greendao.GreenDaoActivity;
 
 
 public class MainActivity extends BaseActivity{
@@ -34,6 +35,7 @@ public class MainActivity extends BaseActivity{
         viewList.add("百度地图");
         viewList.add("百度导航");
         viewList.add("picasso图片下载使用示例");
+        viewList.add("greenDao使用例子");
 
         // 设置item增加和删除时的动画
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -60,7 +62,10 @@ public class MainActivity extends BaseActivity{
                         case 3:
                              intent=new Intent(MainActivity.this, picasso.MainActivity.class);      //picasso 图片下载展示
                              break;
-                    default: intent=new Intent(MainActivity.this, MainActivity.class);
+                        case 4:
+                             intent=new Intent(MainActivity.this, GreenDaoActivity.class);      //greenDAO 示例
+                        break;
+                        default: intent=new Intent(MainActivity.this, MainActivity.class);
                         break;
                 }
                if(intent!=null){
